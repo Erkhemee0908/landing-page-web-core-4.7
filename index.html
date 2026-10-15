@@ -34,14 +34,14 @@
                     </div>
 
                     <div class="register-social flex-center gap-2">
-                        <div class="register-social-btn register-fb w-full flex-center justify-start">
+                        <button type="button" class="register-social-btn register-fb w-full flex-center justify-start">
                             <img src="assets/facebook.svg" alt="" height="20">
-                            <div class="w-full flex-center">Register with Facebook</div>
-                        </div>
-                        <div class="register-social-btn register-ln w-full flex-center justify-start">
+                            <span class="w-full flex-center justify-start">Register with Facebook</span>
+                        </button>
+                        <button type="button" class="register-social-btn register-ln w-full flex-center justify-start">
                             <img src="assets/linkedin.svg" alt="" height="20">
-                            <div class="w-full flex-center">Register with LinkedIn</div>
-                        </div>
+                            <span class="w-full flex-center justify-start">Register with LinkedIn</span>
+                        </button>
                     </div>
 
                     <div class="or-line flex-center">OR</div>
@@ -62,12 +62,11 @@
                         </div>
 
                         <div class="register-type flex-center flex-col flex-start gap-2">
-                            <div class="flex-center flex-col flex-start gap-2" role="radiogroup"
-                                aria-labelledby="investor-type">
-                                <div class="flex-center flex-col flex-start gap-1">
-                                    <div class="legend-main" id="investor-type">What type of investor are you?</div>
-                                    <div class="legend-sub">Select the type of investor you are below.</div>
-                                </div>
+                            <fieldset class="flex-center flex-col flex-start">
+                                <legend class="flex-center flex-col flex-start gap-1">
+                                    <h1 class="legend-main">What type of investor are you?</h1>
+                                    <h2 class="legend-sub">Select the type of investor you are below.</h2>
+                                </legend>
 
                                 <div class="select-shell flex-center justify-start gap-2">
                                     <label>
@@ -87,7 +86,7 @@
                                         Trust<span class="info-btn">ⓘ</span>
                                     </label>
                                 </div>
-                            </div>
+                            </fieldset>
 
                             <div class="type-info">
                                 I am a natural person investing on my own behalf as a sole owner, joint tenant, or
@@ -97,8 +96,10 @@
 
                         <label class="agree-shell flex-center justify-start gap-1">
                             <input type="checkbox" name="agree">
-                            I agree to the terms and receiving notifications from iintoo
-                            <a href="#">View full terms</a>
+                            <span>
+                                I agree to the terms and receiving notifications from iintoo
+                                <a href="#">View full terms</a>
+                            </span>
                         </label>
 
                         <div class="submit-shell">
