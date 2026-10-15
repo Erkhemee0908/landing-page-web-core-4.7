@@ -1,0 +1,298 @@
+/* ===== Variables ===== */
+:root {
+  --bg: #eff6ff;
+  --text: #2a4a5c;
+  --fb: #255a9b;
+  --in: #0076b6;
+  --accent: #3698fb;
+  --muted: #7b8a92;
+  --label: #96a5b1;
+  --light: #afafaf;
+  --border: #eeeeee;
+  --white: #ffffff;
+}
+
+/* ===== Base ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Barlow", sans-serif;
+  font-size: x-small;
+  color: var(--text);
+}
+
+input,
+button {
+  font: inherit;
+  color: inherit;
+}
+
+fieldset {
+  border: none;
+}
+
+/* ===== Utilities ===== */
+.w-full {
+  width: 100%;
+}
+
+.m-1 {
+  margin: 2rem;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-start {
+  align-items: start;
+}
+
+.justify-start {
+  justify-content: start;
+}
+
+.gap-1 {
+  gap: 0.2rem;
+}
+
+.gap-2 {
+  gap: 1.5rem;
+}
+
+.no-mobile {
+  display: none;
+}
+
+/* ===== Layout ===== */
+.parent {
+  min-height: 100dvh;
+  background-color: var(--bg);
+}
+
+.main {
+  max-width: 32rem;
+  background-color: var(--white);
+}
+
+.main-child {
+  flex: 1;
+  align-self: stretch;
+}
+
+.bg-img {
+  width: 100%;
+  height: 100%;
+  background: url("assets/bg.jpg") center / cover no-repeat;
+}
+
+.logo {
+  margin: 28px 0 0 22px;
+}
+
+/* ===== Text ===== */
+.slogan-main {
+  font-size: x-large;
+}
+
+.slogan-sub,
+.legend-sub {
+  color: var(--muted);
+}
+
+/* ===== Social buttons ===== */
+.register-social {
+  gap: 1rem;
+}
+
+.register-social-btn {
+  padding: 0.8rem 1rem;
+  color: var(--white);
+  text-align: center;
+  cursor: pointer;
+}
+
+.register-fb {
+  background-color: var(--fb);
+}
+
+.register-ln {
+  background-color: var(--in);
+}
+
+/* ===== OR ===== */
+.or-line {
+  gap: 1.5rem;
+  max-width: 24rem;
+  align-self: center;
+  color: var(--text);
+}
+
+.or-line::before,
+.or-line::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+/* ===== Inputs ===== */
+.register-info {
+  gap: 2rem;
+}
+
+.register-input-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.2rem 0.8rem 0.6rem;
+  border: 1px solid var(--border);
+  background: var(--white);
+  cursor: text;
+}
+
+.register-input-shell:focus-within {
+  box-shadow: inset 2px 0 0 var(--accent);
+}
+
+.register-input-label {
+  color: var(--label);
+}
+
+.register-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: small;
+}
+
+/* ===== Radio ===== */
+.select-shell > label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+}
+
+.register-type input[type="radio"] {
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid var(--border);
+  border-radius: 50%;
+  background: var(--white);
+  cursor: pointer;
+  transition: border 0.15s;
+}
+
+.register-type input[type="radio"]:checked {
+  border: 4px solid var(--accent);
+}
+
+.info-btn {
+  color: var(--light);
+}
+
+.type-info {
+  max-width: 15rem;
+  margin-bottom: 1rem;
+  padding: 0.8rem 1rem;
+  border-radius: 0.6rem;
+  background-color: var(--white);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: var(--light);
+}
+
+/* ===== Checkbox ===== */
+.agree-shell {
+  color: var(--light);
+}
+
+.agree-shell input[type="checkbox"] {
+  appearance: none;
+  flex-shrink: 0;
+  width: 1.1rem;
+  height: 1.1rem;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  background: var(--white);
+  cursor: pointer;
+}
+
+.agree-shell input[type="checkbox"]:checked {
+  background: var(--accent)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3 8l3 3 7-7' stroke='white' stroke-width='2' fill='none'/%3E%3C/svg%3E")
+    center / 80% no-repeat;
+  border-color: var(--accent);
+}
+
+.agree-shell a {
+  color: var(--accent);
+}
+
+/* ===== Submit ===== */
+.submit-shell > button {
+  padding: 1rem 4rem;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--accent);
+  color: var(--white);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.register-social-btn:hover,
+.submit-shell > button:hover {
+  opacity: 0.9;
+}
+
+/* ===== Responsive ===== */
+@media (min-width: 42rem) {
+  body {
+    font-size: small;
+  }
+
+  .main {
+    max-width: 52rem;
+  }
+
+  .no-mobile {
+    display: flex;
+  }
+}
+
+@media (min-width: 64rem) {
+  .main {
+    min-height: 80dvh;
+    margin: 4rem 3rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .main {
+    max-width: 72rem;
+  }
+
+  .gap-1 {
+    gap: 0.7rem;
+  }
+
+  .gap-2 {
+    gap: 2rem;
+  }
+}

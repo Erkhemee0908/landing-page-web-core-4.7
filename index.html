@@ -5,11 +5,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eric | CSS Task</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <p>Hello World</p>
+    <main class="parent flex-center">
+        <div class="main flex-center">
+
+            <!-- Left: image -->
+            <div class="main-child flex-center no-mobile">
+                <div class="bg-img">
+                    <img class="logo" src="assets/logo-2.svg" alt="iintoo" width="92">
+                </div>
+            </div>
+
+            <!-- Right: form -->
+            <div class="main-child flex-center">
+                <div class="flex-center flex-col flex-start gap-2 m-1">
+
+                    <div class="slogan flex-center flex-col flex-start gap-1">
+                        <div class="slogan-main">Get iintoo it today</div>
+                        <div class="slogan-sub">There is no charge or obligation upon registration.</div>
+                    </div>
+
+                    <div class="register-social flex-center gap-2">
+                        <div class="register-social-btn register-fb w-full flex-center justify-start">
+                            <img src="assets/facebook.svg" alt="" height="20">
+                            <div class="w-full flex-center">Register with Facebook</div>
+                        </div>
+                        <div class="register-social-btn register-ln w-full flex-center justify-start">
+                            <img src="assets/linkedin.svg" alt="" height="20">
+                            <div class="w-full flex-center">Register with LinkedIn</div>
+                        </div>
+                    </div>
+
+                    <div class="or-line flex-center">OR</div>
+
+                    <form class="register-form flex-center flex-col flex-start gap-2" action="#">
+
+                        <div class="register-info flex-center">
+                            <div class="register-input-shell w-full">
+                                <label for="register-email" class="register-input-label">Email</label>
+                                <input type="email" name="register-email" id="register-email" class="register-input"
+                                    autocomplete="email">
+                            </div>
+                            <div class="register-input-shell w-full">
+                                <label for="register-phone" class="register-input-label">Phone</label>
+                                <input type="tel" name="register-phone" id="register-phone" class="register-input"
+                                    autocomplete="tel">
+                            </div>
+                        </div>
+
+                        <div class="register-type flex-center flex-col flex-start gap-2">
+                            <div class="flex-center flex-col flex-start gap-2" role="radiogroup"
+                                aria-labelledby="investor-type">
+                                <div class="flex-center flex-col flex-start gap-1">
+                                    <div class="legend-main" id="investor-type">What type of investor are you?</div>
+                                    <div class="legend-sub">Select the type of investor you are below.</div>
+                                </div>
+
+                                <div class="select-shell flex-center justify-start gap-2">
+                                    <label>
+                                        <input type="radio" name="register-type" value="Individual" checked>
+                                        Individual<span class="info-btn">ⓘ</span>
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="register-type" value="Business">
+                                        Business<span class="info-btn">ⓘ</span>
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="register-type" value="IRA">
+                                        IRA<span class="info-btn">ⓘ</span>
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="register-type" value="Trust">
+                                        Trust<span class="info-btn">ⓘ</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="type-info">
+                                I am a natural person investing on my own behalf as a sole owner, joint tenant, or
+                                tenant in common.
+                            </div>
+                        </div>
+
+                        <label class="agree-shell flex-center justify-start gap-1">
+                            <input type="checkbox" name="agree">
+                            I agree to the terms and receiving notifications from iintoo
+                            <a href="#">View full terms</a>
+                        </label>
+
+                        <div class="submit-shell">
+                            <button type="submit">Create Account</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </main>
 </body>
 
 </html>
